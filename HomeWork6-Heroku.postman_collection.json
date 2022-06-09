@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "79f4fab0-65f7-41b4-b7e7-593fb5ca7f3a",
+		"name": "HomeWork6-Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "註冊會員",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"借過拉1111\",\n    \"email\": \"tt123456789@gmail.com\",\n    \"password\": \"12345678\",\n    \"confirmPassword\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gentle-coast-76943.herokuapp.com/users/signup",
+					"protocol": "https",
+					"host": [
+						"gentle-coast-76943",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入會員",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"tt123456789@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gentle-coast-76943.herokuapp.com/users/signin",
+					"protocol": "https",
+					"host": [
+						"gentle-coast-76943",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新密碼",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTE5NDYzOWMyNzMyZjg5ZjFlMWIxMCIsImlhdCI6MTY1NDc1NjYyOCwiZXhwIjoxNjU1MzYxNDI4fQ.OrNOUC_sKWV71ti4wb_mMOCaTvWEJbTiZxTeKJ3CNZ4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"12345678\",\n    \"confirmPassword\":\"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gentle-coast-76943.herokuapp.com/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"gentle-coast-76943",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得會員資訊",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTE5NDYzOWMyNzMyZjg5ZjFlMWIxMCIsImlhdCI6MTY1NDc1NjYyOCwiZXhwIjoxNjU1MzYxNDI4fQ.OrNOUC_sKWV71ti4wb_mMOCaTvWEJbTiZxTeKJ3CNZ4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://gentle-coast-76943.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"gentle-coast-76943",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTE5NDYzOWMyNzMyZjg5ZjFlMWIxMCIsImlhdCI6MTY1NDc1NjYyOCwiZXhwIjoxNjU1MzYxNDI4fQ.OrNOUC_sKWV71ti4wb_mMOCaTvWEJbTiZxTeKJ3CNZ4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"借過拉1111\",\n    \"sex\": \"male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gentle-coast-76943.herokuapp.com/users/profiles",
+					"protocol": "https",
+					"host": [
+						"gentle-coast-76943",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
